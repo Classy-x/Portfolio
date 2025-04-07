@@ -38,7 +38,7 @@ Hi there! I'm **Senthil Kumar**, a passionate web developer focused on building 
 
 ---
 
-## ✨ Technologies Used
+## 🛠️ Technologies Used
 
 - HTML5
 - CSS3
