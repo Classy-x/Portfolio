@@ -62,9 +62,9 @@ All contributions, big or small, are welcome and appreciated!
 
 ## 🔗 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/your-profile)
+- [LinkedIn](https://www.linkedin.com/in/senthil-kumar-418b692a5)
 - [GitHub](https://github.com/classy-x)
-- [Email](mailto:your.email@example.com)
+- [Email](senthilkumarsusi2002@gmail.com)
   
 ---
 
