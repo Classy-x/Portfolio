@@ -4,15 +4,15 @@ Welcome to my portfolio! This website showcases my skills, projects, and experie
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
-- [Introduction](#-introduction)
-- [Demo](#-demo)
-- [Features](#-features)
+- [Introduction](#introduction)
+- [Demo](#demo)
+- [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Contributing](#-contributing)
-- [Connect with Me](#-connect-with-me)
-- [License](#-license)
+- [Contributing](#contributing)
+- [Connect with Me](#connect-with-me)
+- [License](#license)
 
 ---
 
@@ -40,8 +40,8 @@ Hi there! I'm **Senthil Kumar**, a passionate web developer focused on building 
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
+- HTML5  
+- CSS3  
 - JavaScript (Vanilla)
 
 ---
@@ -50,11 +50,11 @@ Hi there! I'm **Senthil Kumar**, a passionate web developer focused on building 
 
 Have suggestions or want to contribute?
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-idea`)
-3. Commit your changes (`git commit -m 'Add new feature'`)
-4. Push to the branch (`git push origin feature-idea`)
-5. Open a Pull Request
+1. Fork the repository  
+2. Create a new branch (`git checkout -b feature-idea`)  
+3. Commit your changes (`git commit -m 'Add new feature'`)  
+4. Push to the branch (`git push origin feature-idea`)  
+5. Open a Pull Request  
 
 All contributions, big or small, are welcome and appreciated!
 
@@ -62,10 +62,10 @@ All contributions, big or small, are welcome and appreciated!
 
 ## 🔗 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/your-profile)
-- [GitHub](https://github.com/classy-x)
+- [LinkedIn](https://www.linkedin.com/in/your-profile)  
+- [GitHub](https://github.com/classy-x)  
 - [Email](mailto:your.email@example.com)
-  
+
 ---
 
 ## 📄 License
