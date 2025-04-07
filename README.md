@@ -4,14 +4,14 @@ Welcome to my portfolio! This website showcases my skills, projects, and experie
 
 ---
 
-## Table of Contents
+## 📚 Table of Contents
 
 - [Introduction](#introduction)
 - [Demo](#demo)
 - [Features](#features)
-- [Technologies Used](#technologies-used)
+- [Technologies-used](#technologies-used)
 - [Contributing](#contributing)
-- [Connect with Me](#connect-with-me)
+- [Connect-with-me](#connect-with-me)
 - [License](#license)
 
 ---
