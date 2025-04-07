@@ -64,7 +64,7 @@ All contributions, big or small, are welcome and appreciated!
 
 - [LinkedIn](https://www.linkedin.com/in/senthil-kumar-418b692a5)
 - [GitHub](https://github.com/classy-x)
-- [Email](senthilkumarsusi2002@gmail.com)
+- [Email](mailto:senthilkumarsusi2002@gmail.com)
   
 ---
 
