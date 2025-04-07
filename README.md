@@ -9,7 +9,7 @@ Welcome to my portfolio! This website showcases my skills, projects, and experie
 - [Introduction](#-introduction)
 - [Demo](#-demo)
 - [Features](#-features)
-- [Technologies Used](#technologies-used)
+- [Technologies Used](#-technologies-used)
 - [Contributing](#-contributing)
 - [Connect with Me](#-connect-with-me)
 - [License](#-license)
@@ -38,7 +38,7 @@ Hi there! I'm **Senthil Kumar**, a passionate web developer focused on building 
 
 ---
 
-## Technologies Used
+## ⚒️ Technologies Used
 
 - HTML5
 - CSS3
