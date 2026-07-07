@@ -5,7 +5,6 @@
 	--color-bg-primary: #DCDCDC;
 	--color-bg-secondary: #242424;
 	--color-bg-footer: #151515;
-	--color-white: #ffffff;
 	--color-text: #676767;
 	--color-border: #373737; */
 :root {
@@ -16,11 +15,11 @@
 	--color-bg-primary: #FFFFFF;
 	--color-bg-secondary: #242424;
 	--color-bg-footer: #151515;
-	--color-white: #1b1919f5;
+	--color-black: #1b1919f5;
 	--color-text: #676767;
 	--color-inner-text: #FFFFFF;
 	--color-border: #373737;
-  
+	--color-white: #ffffff;
 	/* Font & Typography
 	___________________*/
 	--ff-body: "Space Grotesk", sans-serif;
@@ -60,12 +59,12 @@
   *::after {
 	box-sizing: border-box;
   }
-  
+
   h1,
   h2,
   h3,
   h4 {
-	color: var(--color-white);
+	color: var(--color-black);
 	font-weight: var(--fw-bold);
   }
   
@@ -209,14 +208,14 @@
   .btn {
 	display: inline-block;
 	padding: 1.5rem 4rem;
-	color: var(--color-white);
+	color: var(--color-black);
 	font-weight: var(--fw-semibold);
 	transition: var(--transition);
   }
   
   .btn--primary {
 	background-color: var(--color-primary);
-	color: var(--color-white);
+	color: var(--color-black);
   }
   
   .btn--primary:hover {
@@ -224,13 +223,13 @@
   }
   
   .btn--secondary {
-	background-color: var(--color-white);
+	background-color: var(--color-black);
 	color: var(--color-bg-primary);
   }
   
   .btn--secondary:hover {
 	background-color: var(--color-primary);
-	color: var(--color-white);
+	color: var(--color-black);
   }
   
   /* Header
@@ -271,7 +270,7 @@
   }
   
   .nav__brand i {
-	color: var(--color-white);
+	color: var(--color-black);
   }
   
   .nav__list {
@@ -290,7 +289,7 @@
   .nav__toggle {
 	display: none;
 	font-size: var(--fs-xl);
-	color: var(--color-white);
+	color: var(--color-black);
 	cursor: pointer;
 	transition: var(--transition);
   }
@@ -305,7 +304,7 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     max-width: 400px;
     width: 100%;
-	color: var(--color-white)
+	color: var(--color-black)
 }
 .contact-form-section > span{
 	display: block;
@@ -419,7 +418,7 @@
   .hero__info-number {
 	font-size: var(--fs-xxl);
 	font-weight: var(--fw-bold);
-	color: var(--color-white);
+	color: var(--color-black);
 	margin-bottom: 1rem;
   }
   
@@ -534,7 +533,7 @@
   .qualification__footer-text {
 	font-size: var(--fs-xl);
 	font-weight: var(--fw-bold);
-	color: var(--color-white);
+	color: var(--color-black);
 	margin-bottom: 2rem;
   }
   
@@ -555,12 +554,12 @@
   }
   
   .service__card:hover .service__link {
-	color: var(--color-white);
+	color: var(--color-black);
   }
   
   .service__icon {
 	font-size: 3.5rem;
-	color: var(--color-white);
+	color: var(--color-black);
 	margin-bottom: 1.5rem;
   }
   
@@ -587,7 +586,7 @@
   }
   
   .project__title {
-	color: var(--color-white);
+	color: var(--color-black);
 	font-size: var(--fs-lg);
 	margin-bottom: 1rem;
   }
@@ -640,6 +639,7 @@
   .testimonial__name {
 	font-size: var(--fs-md);
 	margin-bottom: 0.5rem;
+	color: var(--color-text);
   }
   
   .testimonial__occupation {
