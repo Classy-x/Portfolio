@@ -160,3 +160,15 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     alert(errorMessage)
   }
 });
+
+//Experience
+const startDate = new Date("2024-06-01");
+const today = new Date();
+
+const months =
+  (today.getFullYear() - startDate.getFullYear()) * 12 +
+  (today.getMonth() - startDate.getMonth());
+
+const years = (months / 12).toFixed(1);
+
+document.getElementById("experience").textContent = `${years}+`;
