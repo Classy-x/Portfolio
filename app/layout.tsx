@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://senthilkumar.dev"),
+  metadataBase: new URL("https://classy-x.github.io/Portfolio"),
   title: "Senthil Kumar | Passion for Design & Development",
   description:
     "Portfolio of Senthil Kumar - Full Stack Developer specializing in React, Next.js, TypeScript, Java, Node.js, and high-performance digital experiences.",
   icons: {
-    icon: "/assets/img/my_avatar.png",
+    icon: "/Portfolio/assets/img/my_avatar.png",
   },
   openGraph: {
     title: "Senthil Kumar | Full Stack Developer",
     description:
       "A full stack developer passionate about building intuitive, scalable, and high-performing digital experiences.",
-    images: ["/assets/img/own_pic.jpg"],
+    images: ["/Portfolio/assets/img/own_pic.jpg"],
   },
 };
 

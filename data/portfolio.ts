@@ -37,6 +37,27 @@ export interface Testimonial {
   content: string;
 }
 
+export const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH ??
+  (process.env.NODE_ENV === "production" ? "/Portfolio" : "");
+
+export const withBasePath = (path: string): string => {
+  if (!path) return "";
+  if (
+    path.startsWith("http://") ||
+    path.startsWith("https://") ||
+    path.startsWith("mailto:") ||
+    path.startsWith("tel:")
+  ) {
+    return path;
+  }
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  if (basePath && cleanPath.startsWith(basePath)) {
+    return cleanPath;
+  }
+  return `${basePath}${cleanPath}`;
+};
+
 export const personalData = {
   name: "Senthil Kumar",
   title: "Full Stack Developer",
@@ -56,7 +77,7 @@ export const personalData = {
     email: "senthilkumarsusi2002@gmail.com",
     phone: "+91 6369316704",
     location: "Tamil Nadu, India",
-    resumePdf: "/assets/Senthil_kumar_cv.pdf",
+    resumePdf: withBasePath("/assets/Senthil_kumar_cv.pdf"),
     web3FormsKey: "6d4d1462-58ef-4049-bf0f-058a5136e779",
   },
   socials: [
@@ -191,7 +212,7 @@ export const projectsData: Project[] = [
     title: "Invisible Watermarking",
     description:
       "An advanced technique for embedding hidden watermarks in images to protect digital assets while maintaining visual integrity and copyright ownership.",
-    image: "/assets/img/project1.png",
+    image: withBasePath("/assets/img/project1.png"),
     tags: ["Image Processing", "Security", "Web Dev"],
   },
   {
@@ -199,7 +220,7 @@ export const projectsData: Project[] = [
     title: "Fit Tracker",
     description:
       "A comprehensive fitness tracking web app that empowers users to set goals, log workouts, track calories, and monitor progress toward a healthier lifestyle.",
-    image: "/assets/img/project2.png",
+    image: withBasePath("/assets/img/project2.png"),
     tags: ["React", "UI/UX", "Dashboard", "Health Tech"],
   },
   {
@@ -207,7 +228,7 @@ export const projectsData: Project[] = [
     title: "Personal Portfolio Website",
     description:
       "A responsive, modern portfolio website highlighting frontend skills, projects, and professional experience with high-performance animations and sleek typography.",
-    image: "/assets/img/project3.png",
+    image: withBasePath("/assets/img/project3.png"),
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
 ];
