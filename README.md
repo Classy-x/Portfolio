@@ -1,73 +1,88 @@
-# 💼 Portfolio
+# Senthil Kumar — Portfolio Website
 
-Welcome to my portfolio! This website showcases my skills, projects, and experience in the field of web development. Feel free to explore and learn more about me.
+A modern, high-performance portfolio website built with **Next.js 15 (App Router)**, **TypeScript**, and **Tailwind CSS** for **Senthil Kumar**, Full Stack Developer.
 
----
-
-## 📚 Table of Contents
-
-- [Introduction](#-introduction)
-- [Demo](#-demo)
-- [Features](#-features)
-- [Technologies Used](#-technologies-used)
-- [Contributing](#-contributing)
-- [Connect with Me](#-connect-with-me)
-- [License](#-license)
+Converted and upgraded from the original static HTML/CSS/JS version with enhanced interactivity, dark mode support, reactive forms, dynamic experience calculation, and modern responsive components.
 
 ---
 
-## 👋 Introduction
+## 🚀 Tech Stack
 
-Hi there! I'm **Senthil Kumar**, a passionate web developer focused on building user-friendly and visually appealing websites. This portfolio is a reflection of my skills, showcasing various projects I've worked on.
-
----
-
-## 🔗 Demo
-
-👉 [View Live Demo](https://classy-x.github.io/Portfolio/)
-
----
-
-## ✨ Features
-
-- Fully responsive design (mobile-friendly)
-- Smooth scroll and navigation animations
-- Clean and minimal UI
-- Project showcase with descriptions
-- Contact section
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, Static Export enabled)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Interactive Effects**: [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
+- **Typography**: Space Grotesk
+- **Form Submission**: [Web3Forms](https://web3forms.com/) API Integration
 
 ---
 
-## 🔧 Technologies Used
+## 📁 Project Architecture
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+```
+Portfolio/
+├── app/                      # Next.js App Router
+│   ├── globals.css           # Global Tailwind styling, theme rules & custom scrollbar
+│   ├── layout.tsx            # Root layout with metadata and OpenGraph configuration
+│   ├── not-found.tsx         # Custom 404 page
+│   └── page.tsx              # Main homepage composing all sections and modals
+├── components/               # Modular UI components
+│   ├── Navbar.tsx            # Sticky navigation, mobile drawer, and dark/light mode toggle
+│   ├── Hero.tsx              # Hero section with dynamic years-of-experience counter
+│   ├── About.tsx             # Professional bio, LinkedIn link, and categorized skills
+│   ├── Qualification.tsx     # Interactive tabs for Experience and Education timeline
+│   ├── Projects.tsx          # Featured showcase cards with tags and links
+│   ├── Testimonials.tsx      # Testimonials carousel with colleague reviews
+│   ├── Contact.tsx           # Contact details and direct Web3Forms message form
+│   ├── ContactModal.tsx      # Quick modal contact form triggered by CTAs
+│   ├── ResumeModal.tsx       # Download and preview modal for Senthil's CV
+│   └── Footer.tsx            # Social links, contact channels, and copyright notice
+├── data/
+│   └── portfolio.ts          # Centralized typed data file for easily updating info
+├── public/
+│   └── assets/               # Images and PDF resume files
+├── out/                      # Production-ready static export output
+├── next.config.mjs           # Next.js configuration (static export, unoptimized images)
+├── tailwind.config.ts        # Tailwind theme colors and font configuration
+├── tsconfig.json             # TypeScript compiler settings
+└── package.json              # Project scripts and dependencies
+```
 
 ---
 
-## 🤝 Contributing
+## 🛠️ Getting Started
 
-Have suggestions or want to contribute?
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-1. Fork the repository
-2. Create a new branch (git checkout -b feature-idea)
-3. Commit your changes (git commit -m 'Add new feature')
-4. Push to the branch (git push origin feature-idea)
-5. Open a Pull Request
+### 2. Run the Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-All contributions, big or small, are welcome and appreciated!
+### 3. Build for Production
+```bash
+npm run build
+```
+This generates a fully optimized, production-ready static export in the `out/` directory.
 
 ---
 
-## 🔗 Connect with Me
+## ⚙️ Content Customization
 
-- [LinkedIn](https://www.linkedin.com/in/senthil-kumar-418b692a5)
-- [GitHub](https://github.com/classy-x)
-- [Email](mailto:senthilkumarsusi2002@gmail.com)
-  
+All personal details, skills, experience, education, projects, and social links are centrally stored in `data/portfolio.ts`. You can update your text, add new projects, or modify contact information directly in that file without having to touch UI components.
+
 ---
 
-## 📄 License
+## 🌐 Deployment
 
-This project is open-source and available under the [MIT License](LICENSE)
+The project is configured with `output: "export"`, making it ready to deploy instantly to:
+- **Vercel** (`npx vercel` or git import)
+- **GitHub Pages**
+- **Netlify**
+- **Cloudflare Pages**
+- Any static hosting provider
