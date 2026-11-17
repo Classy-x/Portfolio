@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, Sparkles, Send, FolderGit2 } from "lucide-react";
-import { personalData } from "@/data/portfolio";
+import { personalData, withBasePath } from "@/data/portfolio";
 
 export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
   const [experienceYears, setExperienceYears] = useState("1.5+");
@@ -105,7 +105,7 @@ export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
               
               <div className="relative w-72 sm:w-80 md:w-96 aspect-[3/4] rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border-2 border-white/50 dark:border-slate-700/50 shadow-2xl">
                 <Image
-                  src="/assets/img/own_pic.jpg"
+                  src={withBasePath("/assets/img/own_pic.jpg")}
                   alt="Senthil Kumar"
                   fill
                   priority
