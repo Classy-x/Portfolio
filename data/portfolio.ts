@@ -89,6 +89,21 @@ export function getResumeLinks(rawUrl: string) {
   };
 }
 
+export function calculateExperienceYears(startDateStr: string = "2024-06-01"): string {
+  const startDate = new Date(startDateStr);
+  const today = new Date();
+  const months =
+    (today.getFullYear() - startDate.getFullYear()) * 12 +
+    (today.getMonth() - startDate.getMonth());
+  const years = (months / 12).toFixed(1);
+  return `${years}+`;
+}
+
+export function getAboutDescription(years?: string): string {
+  const exp = years || calculateExperienceYears();
+  return `Full Stack Developer with ${exp} years of experience engineering scalable enterprise web applications, internal business platforms, and independent full stack products. Skilled across Node.js, Express.js, PostgreSQL, RESTful APIs, and JWT authentication on the backend, alongside React.js, Next.js, TypeScript, and Tailwind CSS on the frontend.`;
+}
+
 export const personalData = {
   name: "Senthil Kumar",
   title: "Full Stack Developer",
@@ -96,8 +111,7 @@ export const personalData = {
   tagline: "Passion for Design & Development",
   heroDescription:
     "A full stack developer passionate about building intuitive and high-performing digital experiences. I blend creativity with technical expertise to develop seamless, scalable web applications.",
-  aboutDescription:
-    "Full Stack Developer with 2.5+ years of experience engineering scalable enterprise web applications, internal business platforms, and independent full stack products. Skilled across Node.js, Express.js, PostgreSQL, RESTful APIs, and JWT authentication on the backend, alongside React.js, Next.js, TypeScript, and Tailwind CSS on the frontend.",
+  aboutDescription: getAboutDescription(),
   startDate: "2024-06-01",
   stats: [
     { label: "Years Experience", valueKey: "experience" },

@@ -4,19 +4,13 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, Sparkles, Send, FolderGit2 } from "lucide-react";
-import { personalData, withBasePath } from "@/data/portfolio";
+import { personalData, withBasePath, calculateExperienceYears } from "@/data/portfolio";
 
 export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
-  const [experienceYears, setExperienceYears] = useState("1.5+");
+  const [experienceYears, setExperienceYears] = useState("2.5+");
 
   useEffect(() => {
-    const startDate = new Date(personalData.startDate);
-    const today = new Date();
-    const months =
-      (today.getFullYear() - startDate.getFullYear()) * 12 +
-      (today.getMonth() - startDate.getMonth());
-    const years = (months / 12).toFixed(1);
-    setExperienceYears(`${years}+`);
+    setExperienceYears(calculateExperienceYears(personalData.startDate));
   }, []);
 
   return (
