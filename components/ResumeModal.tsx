@@ -2,7 +2,7 @@
 
 import { FileText, Download, ExternalLink, X } from "lucide-react";
 import confetti from "canvas-confetti";
-import { personalData } from "@/data/portfolio";
+import { personalData, getResumeLinks } from "@/data/portfolio";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -12,18 +12,27 @@ interface ResumeModalProps {
 export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   if (!isOpen) return null;
 
+  const { previewUrl, downloadUrl, isExternal } = getResumeLinks(
+    personalData.contact.resumePdf
+  );
+
   const handleDownload = () => {
     confetti({
       particleCount: 50,
       spread: 45,
       origin: { y: 0.7 },
     });
-    const link = document.createElement("a");
-    link.href = personalData.contact.resumePdf;
-    link.download = "Senthil_reference_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+
+    if (isExternal) {
+      window.open(downloadUrl, "_blank", "noopener,noreferrer");
+    } else {
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.download = "Senthil_reference_CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
     onClose();
   };
 
@@ -62,7 +71,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             </button>
 
             <a
-              href={personalData.contact.resumePdf}
+              href={previewUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={onClose}
@@ -77,4 +86,3 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
     </div>
   );
 }
-

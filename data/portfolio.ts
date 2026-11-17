@@ -58,6 +58,37 @@ export const withBasePath = (path: string): string => {
   return `${basePath}${cleanPath}`;
 };
 
+export function getResumeLinks(rawUrl: string) {
+  if (!rawUrl) return { previewUrl: "", downloadUrl: "", isExternal: false };
+
+  // Support Google Drive links: https://drive.google.com/file/d/{FILE_ID}/view
+  const driveMatch = rawUrl.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (driveMatch && driveMatch[1]) {
+    const fileId = driveMatch[1];
+    return {
+      previewUrl: `https://drive.google.com/file/d/${fileId}/view`,
+      downloadUrl: `https://drive.google.com/uc?export=download&id=${fileId}`,
+      isExternal: true,
+    };
+  }
+
+  // Support any external cloud host (Cloudinary, Dropbox, AWS S3, etc.)
+  if (rawUrl.startsWith("http://") || rawUrl.startsWith("https://")) {
+    return {
+      previewUrl: rawUrl,
+      downloadUrl: rawUrl,
+      isExternal: true,
+    };
+  }
+
+  // Local file fallback
+  return {
+    previewUrl: rawUrl,
+    downloadUrl: rawUrl,
+    isExternal: false,
+  };
+}
+
 export const personalData = {
   name: "Senthil Kumar",
   title: "Full Stack Developer",
@@ -77,7 +108,7 @@ export const personalData = {
     email: "senthilkumarsusi2002@gmail.com",
     phone: "+91 6369316704",
     location: "Tamil Nadu, India",
-    resumePdf: withBasePath("/assets/Senthil_kumar_cv.pdf"),
+    resumePdf: "https://drive.google.com/file/d/1i9oTTNn7s0CaHcQ6DP7qKWzRsZmOpGmR/view?usp=drive_link",
     web3FormsKey: "6d4d1462-58ef-4049-bf0f-058a5136e779",
   },
   socials: [
