@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ExternalLink,
   Layers,
@@ -12,10 +12,15 @@ import {
   Sparkles,
   Code2,
 } from "lucide-react";
-import { personalData, skillsData } from "@/data/portfolio";
+import { personalData, skillsData, calculateExperienceYears } from "@/data/portfolio";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState<string>("all");
+  const [experienceYears, setExperienceYears] = useState("2.5+");
+
+  useEffect(() => {
+    setExperienceYears(calculateExperienceYears(personalData.startDate));
+  }, []);
 
   const getCategoryIcon = (category: string) => {
     const cat = category.toLowerCase();
@@ -60,10 +65,10 @@ export default function About() {
           {/* Bio text column */}
           <div className="lg:col-span-5 space-y-6">
             <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white leading-snug">
-              Professional Full Stack Developer with 2.5+ Years of Experience.
+              Professional Full Stack Developer with {experienceYears} Years of Experience.
             </h3>
             <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-              {personalData.aboutDescription}
+              Full Stack Developer with {experienceYears} years of experience engineering scalable enterprise web applications, internal business platforms, and independent full stack products. Skilled across Node.js, Express.js, PostgreSQL, RESTful APIs, and JWT authentication on the backend, alongside React.js, Next.js, TypeScript, and Tailwind CSS on the frontend.
             </p>
             <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
               With hands-on experience at Magiva Technologies and Arizon Digital, I have a proven track record of collaborating directly with US-based clients, designing multi-level approval workflows with role-based access, optimizing performance through lazy loading and query tuning, resolving production incidents, and mentoring junior developers.
